@@ -1,0 +1,29 @@
+{
+  "apps": [
+    {
+      "name": "RadiolifeLicense",
+      "script": "npm",
+      "args": "start",
+      "out_file": "/home/ubuntu/projects/hooker.out.log",
+      "err_file": "/home/ubuntu/projects/hooker.err.log"
+    }
+  ],
+  "deploy": {
+    "production": {
+      "user": "ubuntu",
+      "host": [""],
+      "ref": "origin/main",
+      "repo": "",
+      "path": "/home/ubuntu/projects/radiolife",
+      "post-deploy": "npm install && pm2 startOrRestart ecosystem.config.json"
+    },
+    "production-local": {
+      "user": "ubuntu",
+      "host": ["localhost"],
+      "ref": "origin/main",
+      "repo": "",
+      "path": "/home/ubuntu/projects/radiolife",
+      "post-deploy": "npm install && pm2 startOrRestart ecosystem.config.json"
+    }
+  }
+}

@@ -1,0 +1,10 @@
+type Query {
+  """
+  Informação de exemplo
+  """
+  test: String
+  """
+  Obter o ip do request
+  """
+  ip: String
+}

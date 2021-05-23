@@ -1,0 +1,47 @@
+input MessageInput {
+  content: String
+  author: String
+}
+
+type Message {
+  id: ID!
+  content: String
+  author: String
+}
+
+"""
+Service de mensagens
+"""
+type MessageService {
+  "Obter uma mensagem"
+  getMessage: Message
+  "Cria uma nova mensagem"
+  createMessage: Message
+  "Atualiza uma mensagem"
+  updateMessage: Message
+  "Informação da classe"
+  toString: String
+}
+
+type Query {
+  messageService(id: ID!): MessageService
+}
+
+type Mutation {
+  """
+    Criar uma nova mensagem
+
+    Exemplo
+    mutation {
+    messageServiceCreate(input: {author: "Roger", content: "lorem"}) {
+      createMessage {
+        id
+        content
+        author
+      }
+    }
+  }
+  """
+  messageServiceCreate(input: MessageInput): MessageService
+  messageServiceUpdate(id: ID!, input: MessageInput): MessageService
+}
