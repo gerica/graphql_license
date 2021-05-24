@@ -4,6 +4,8 @@
       "name": "RadiolifeLicense",
       "script": "npm",
       "args": "start",
+      "err_file": "err.log",
+      "out_file": "out.log",
       "watch_delay": 1000
     }
   ]

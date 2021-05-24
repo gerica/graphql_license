@@ -3,7 +3,7 @@
     {
       "name": "RadiolifeLicense",
       "script": "npm",
-      "args": "start",
+      "args": "start-production",
       "out_file": "/home/ubuntu/projects/hooker.out.log",
       "err_file": "/home/ubuntu/projects/hooker.err.log"
     }
