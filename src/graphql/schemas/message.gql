@@ -29,18 +29,19 @@ type Query {
 
 type Mutation {
   """
-    Criar uma nova mensagem
-
-    Exemplo
-    mutation {
-    messageServiceCreate(input: {author: "Roger", content: "lorem"}) {
-      createMessage {
-        id
-        content
-        author
+  ### Criar uma nova mensagem
+  #### Exemplo
+  ```javascript
+        mutation {
+        messageServiceCreate(input: {author: "Roger", content: "lorem"}) {
+          createMessage {
+            id
+            content
+            author
+          }
+        }
       }
-    }
-  }
+  ```
   """
   messageServiceCreate(input: MessageInput): MessageService
   messageServiceUpdate(id: ID!, input: MessageInput): MessageService

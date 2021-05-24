@@ -1,10 +1,10 @@
 type Query {
   """
-  Informação de exemplo
+  #### Informação de exemplo
   """
   test: String
   """
-  Obter o ip do request
+  ### Obter o ip do request
   """
   ip: String
 }
