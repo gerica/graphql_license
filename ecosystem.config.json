@@ -1,8 +1,22 @@
 {
   "apps": [
     {
-      "name": "RadiolifeLicense",
+      "name": "RL-License-Local",
       "script": "src/server.js",
+      "env": {
+        "PORT": 4003,
+        "NODE_ENV": "development"
+      },
+      "err_file": "err.log",
+      "out_file": "out.log"
+    },
+    {
+      "name": "RL-License",
+      "script": "src/server.js",
+      "env": {
+        "PORT": 4000,
+        "NODE_ENV": "production"
+      },
       "out_file": "/home/ubuntu/projects/hooker.out.log",
       "err_file": "/home/ubuntu/projects/hooker.err.log"
     }

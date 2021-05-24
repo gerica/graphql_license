@@ -5,8 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start-desenv": "NODE_ENV=desenv node src/server.js",
-    "pm2-start": "pm2 startOrRestart pm2.config.json --watch",
+    "pm2-start": "pm2 startOrRestart ecosystem.config.json --only RL-License-Local --watch",
     "pm2-stop": "pm2 stop RadiolifeLicense",
     "pm2-kill": "pm2 kill",
     "pm2-list": "pm2 list",
