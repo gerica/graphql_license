@@ -2,8 +2,7 @@
   "apps": [
     {
       "name": "RadiolifeLicense",
-      "script": "npm",
-      "args": "start-production",
+      "script": "src/server.js",
       "out_file": "/home/ubuntu/projects/hooker.out.log",
       "err_file": "/home/ubuntu/projects/hooker.err.log"
     }
