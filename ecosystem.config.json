@@ -11,9 +11,9 @@
   "deploy": {
     "production": {
       "user": "ubuntu",
-      "host": [""],
+      "host": ["ec2-18-116-30-81.us-east-2.compute.amazonaws.com"],
       "ref": "origin/main",
-      "repo": "",
+      "repo": "git@github.com:gerica/graphql_license.git",
       "path": "/home/ubuntu/projects/radiolife",
       "post-deploy": "npm install && pm2 startOrRestart ecosystem.config.json"
     },
@@ -21,7 +21,7 @@
       "user": "ubuntu",
       "host": ["localhost"],
       "ref": "origin/main",
-      "repo": "",
+      "repo": "git@github.com:gerica/graphql_license.git",
       "path": "/home/ubuntu/projects/radiolife",
       "post-deploy": "npm install && pm2 startOrRestart ecosystem.config.json"
     }
